@@ -55,6 +55,11 @@ function ThemeHotkey() {
         return
       }
 
+      // In-game, D is a movement key
+      if (document.pointerLockElement) {
+        return
+      }
+
       setTheme(resolvedTheme === "dark" ? "light" : "dark")
     }
 

@@ -130,3 +130,25 @@
     @apply font-sans;
     }
 }
+/* ---------- Last Stand HUD ---------- */
+@keyframes fps-hurt {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes fps-hit {
+  from { opacity: 1; transform: scale(1.25); }
+  to { opacity: 0; transform: scale(0.9); }
+}
+@keyframes fps-banner {
+  0% { opacity: 0; transform: translate(-50%, 12px) scale(0.96); }
+  12%, 75% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -8px); }
+}
+@keyframes fps-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.fps-hurt { animation: fps-hurt 0.7s ease-out forwards; }
+.fps-hit { animation: fps-hit 0.22s ease-out forwards; }
+.fps-banner { animation: fps-banner 2s ease-out forwards; }
+.fps-pulse { animation: fps-pulse 1.2s ease-in-out infinite; }
